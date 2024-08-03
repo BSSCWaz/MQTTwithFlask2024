@@ -6,6 +6,10 @@
 # two concurrent loops. One loop is the subscription to the MQTT topic (which is run in the 
 # worker function as a seperate thread). The main program runs the Flask app. This allows the 
 # code in the worker function to keep running while the website runs.
+# Although I could use this code with in conjunction with any source publishing to the 
+# correct broker and topic, I have used a slightly modified version of the code from here:
+# https://github.com/potentialhades/ESP32_Simulation_Sensor_DHT22/blob/main/main.py run on 
+# a Wokwi simulator such as the following https://wokwi.com/projects/new/micropython-esp32
 # ============================================================================================
 import paho.mqtt.client as mqtt
 import time
